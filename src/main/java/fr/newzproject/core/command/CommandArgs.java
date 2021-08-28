@@ -17,10 +17,10 @@ public class CommandArgs {
             modArgs[i] = args[i + subCommand];
         }
 
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder buffer = new StringBuilder();
         buffer.append(label);
         for (int x = 0; x < subCommand; x++) {
-            buffer.append("." + args[x]);
+            buffer.append(".").append(args[x]);
         }
         String cmdLabel = buffer.toString();
         this.sender = sender;
